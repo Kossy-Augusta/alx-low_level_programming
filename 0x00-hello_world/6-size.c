@@ -2,7 +2,7 @@
  * main - prints the value of the size of data types
  *
  * Return: 0 (Success)
-*/
+ */
 #include <stdio.h>
 int main(void)
 {
