@@ -5,6 +5,7 @@
  *
  * Return: 0 (Success)
  */
+
 int main(void)
 {
         char alpha = 'z';
@@ -14,7 +15,6 @@ int main(void)
                 putchar(alpha);
                 alpha--;
         }
-
         putchar('\n');
 
         return (0);
