@@ -5,19 +5,18 @@
  *
  * Return: 0 (Success)
  */
-
-int main (void)
+int main(void)
 {
+        char alpha = 'z';
 
-	char alpha = 'z';
+        while (alpha >= 'a')
+        {
+                putchar(alpha);
+                alpha--;
+        }
 
-	while (alpha >= 'a')
-	{
-		putchar(alpha);
-		alpha--;
-	}
+        putchar('\n');
 
-	putchar('\n');
-
-	return (0);
+        return (0);
 }
+
