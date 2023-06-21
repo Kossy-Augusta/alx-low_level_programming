@@ -2,9 +2,9 @@
 
 /**
  * _abs - prints the absolute value of a number
- * @a - input integar value
+ * @a - Input integar value
  *
- * Return: Always 0
+ * Return: Absolute value of a
  */
 
 int _abs(int a)
