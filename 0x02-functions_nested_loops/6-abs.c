@@ -2,7 +2,7 @@
 
 /**
  * _abs - prints the absolute value of a number
- * @int - integar value
+ * @a - integar value
  *
  * Return: Always 0
  */
