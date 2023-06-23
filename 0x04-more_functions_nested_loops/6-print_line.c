@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_line -  Draws a straight line 
- * @n: Number of underscores to ne printed
+ *print_line -  Draws a straight line 
+ *@n: Number of underscores to be printed
  */
 
 void print_line(int n)
@@ -15,7 +15,6 @@ void print_line(int n)
 		{
 			_putchar('\n');
 		}
-
 		_putchar(95);
 	}
 
