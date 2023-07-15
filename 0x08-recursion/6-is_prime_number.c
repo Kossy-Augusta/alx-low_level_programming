@@ -1,9 +1,9 @@
 #include "main.h"
 
-int prime_checker (int n, int i);
+int prime_checker(int n, int i);
 
 /**
- * is _prime_number - checks if number is a prime number
+ * is_prime_number - checks if number is a prime number
  * @n: number to be checked
  *
  * Return: 1 if the input integer is a prime number, otherwise return 0
@@ -16,7 +16,7 @@ int is_prime_number(int n)
 }
 
 /**
- * is _prime_number - checks if number is a prime number
+ * prime_checker - checks if number is a prime number
  * @n: number to be checked
  * @i: iterator
  *
