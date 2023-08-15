@@ -66,8 +66,6 @@ int main(int ac, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
 			free(buffer);
-			close_file(fd_from);
-			close_file(fd_to);
 			exit(98);
 		}
 		write_content = write(fd_to, buffer, read_content);
@@ -75,8 +73,6 @@ int main(int ac, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: can't write to file %s\n", argv[2]);
 			free(buffer);
-			close_file(fd_from);
-			close_file(fd_to);
 			exit(99);
 		}
 		read_content = read(fd_from, buffer, 1024);
