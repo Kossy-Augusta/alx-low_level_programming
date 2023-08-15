@@ -64,19 +64,23 @@ int main(int ac, char *argv[])
 	do {
 		if (fd_from == -1  || read_content == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
 			free(buffer);
+			close_file(fd_from);
+			close_file(fd_to);
 			exit(98);
 		}
 		write_content = write(fd_to, buffer, read_content);
 		if (write_content == -1 || fd_to == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: can't write to file %s\n", argv[2]);
 			free(buffer);
+			close_file(fd_from);
+			close_file(fd_to);
 			exit(99);
 		}
 		read_content = read(fd_from, buffer, 1024);
-		fd_to = open(argv[2], O_WRONLY || O_APPEND);
+		fd_to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (read_content > 0);
 	free(buffer);
 	close_file(fd_from);
