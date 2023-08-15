@@ -43,7 +43,7 @@ char *create_buffer(char *file)
 /**
  * main - copies the content of a file to another file
  * @ac: argument count
- * @av:array of pointers to the arguments
+ * @argv:array of pointers to the arguments
  *
  * Return: 0 on success
  */
