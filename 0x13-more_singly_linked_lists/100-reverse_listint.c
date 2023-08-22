@@ -1,5 +1,8 @@
 #include "lists.h"
 
+size_t listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
+
 /**
  * reverse_listint - reverses a listint_t linked list
  * @head: double pointer

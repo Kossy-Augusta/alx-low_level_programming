@@ -6,7 +6,7 @@
  *
  * Return: 0 on failure, integar on success
  */
-int myatoi(char* str)
+int myatoi(char *str)
 {
 	int i = 0, result = 0, sign = 1, flag = 0;
 /** Chheck for whitespce*/
@@ -18,7 +18,7 @@ int myatoi(char* str)
 		sign = -1;
 		i++;
 	}
-	for (; str[i] !='\0'; i++)
+	for (; str[i] != '\0'; i++)
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 		{
@@ -26,7 +26,6 @@ int myatoi(char* str)
 			flag = 1;
 		}
 	}
-	
 	if (flag == 0)
 		return (0);
 	return (sign * result);
@@ -51,7 +50,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i  < argc; i++)
 	{
 		result = result * myatoi(argv[i]);
-	}	
+	}
 	printf("%d\n", result);
 
 	return (0);
