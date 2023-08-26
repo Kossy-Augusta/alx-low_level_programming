@@ -7,26 +7,18 @@
  */
 int main(void)
 {
-	int a;
-	unsigned long int b, c, next_num, sum;
+	unsigned long temp1 = 0, temp2 = 1, sum = 0, current;
 
-	c = 1;
-	c = 2;
-	sum = 0;
-
-	for (a = 1; a <= 33; ++a)
-	{
-		if (b < 4000000 && (b % 2) == 0)
+	do {
+		current = temp1 + temp2;
+		temp1 = temp2;
+		temp2 = current;
+		if (!(current % 2))
 		{
-			sum = sum + b;
+			sum += current;
 		}
-		next_num = b + c;
-		b = c;
-		c = next_num;
-	}
-
+	} while ((temp1 + temp2) < 4000000);
 	printf("%lu\n", sum);
 
 	return (0);
 }
-
