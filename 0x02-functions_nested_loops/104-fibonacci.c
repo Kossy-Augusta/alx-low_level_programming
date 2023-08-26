@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long temp1 = 0, temp2 = 1, current;
+	unsigned long int temp1 = 0, temp2 = 1, current;
 	int i;
 
 	for (i = 1; i <= 98; i++)
