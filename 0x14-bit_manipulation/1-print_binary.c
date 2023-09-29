@@ -11,6 +11,8 @@ int bitCount(unsigned long int num)
 	/**variable to hold the num of bits counted*/
 	int count;
 
+	if (num == 0)
+		return(0);
 	for (count = 0; num != 0; num >>= 1)
 	{
 		if (num | 1)
@@ -18,13 +20,13 @@ int bitCount(unsigned long int num)
 	}
 	if (count == 2)
 		return (0);
+
 	return (count - 1);
 }
 
 /**
- * print_binary - prints binary representation of a n
-mber
- *@n: decimal number to be converted to binary
+ * print_binary - prints binary representation of a number
+ *@n:decimal number to be converted to binary
  *
  */
 void print_binary(unsigned long int n)
@@ -35,8 +37,6 @@ void print_binary(unsigned long int n)
 	count = bitCount(n);
 	/** define bitmask and left shift by number of counts*/
 	bitMask = 1 << count;
-	if (n == 0)
-		_putchar('0');
 	for (i = 0; i <= count; i++)
 	{
 		_putchar(n & bitMask ? '1' : '0');
