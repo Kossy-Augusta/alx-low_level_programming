@@ -12,7 +12,7 @@ int bitCount(unsigned long int num)
 	int count;
 
 	if (num == 0)
-		return(0);
+		return (0);
 	for (count = 0; num != 0; num >>= 1)
 	{
 		if (num | 1)
