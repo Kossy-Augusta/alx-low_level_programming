@@ -4,7 +4,7 @@
  * _memcpy - Copies memory area
  * @dest: ponter to the meory address to be copied to
  * @src: ponter to the memory address to be copied from
- * n: number of bytes to be copied
+ * @n: number of bytes to be copied
  *
  * Return: dest
  */
@@ -16,6 +16,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	{
 		*(dest + i) = src[i];
 	}
-	
+
 	return (dest);
 }
