@@ -28,8 +28,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (i == index)
 		{
+			if (fast->next != NULL)
+				fast->next->prev = slow;
 			slow->next = fast->next;
-			fast->next->prev = slow;
 			free(fast);
 			return (1);
 		}
